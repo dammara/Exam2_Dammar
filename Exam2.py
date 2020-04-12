@@ -19,7 +19,7 @@ def new_list():             # Will print the sorted list when called
     next()
 
 
-def invalid():
+def invalid():              # If the choice is invalid, this screen will display
     print("\033[1mINAVLID CHOICE, TRY AGAIN \033[0m")
     time.sleep(2)
 
@@ -43,41 +43,47 @@ def choose():                   # This is where the user chooses a method
     4. Merge
     5. Quick 
     """)
-    method = int(input(">>>"))
+    method = int(input(">>>"))          # Method is inputted here
+
     while method == 1:                  # Bubble Sort
         print("BUBBLE SORT")
-        take_numbers()
-        bubble_sort(list)
-        new_list()
+        take_numbers()                  # Calls method to ask user how many numbers will be sorted
+        bubble_sort(list)               # Sorts list according to the method
+        new_list()                      # Prints new list
+
     while method == 2:                  # Selection Sort
         print("SELECTION SORT")
         take_numbers()
         selection_sort(list)
         new_list()
+
     while method == 3:                  # Insertion Sort
         print("INSERTION SORT")
         take_numbers()
         insertion_sort(list)
         new_list()
+
     while method == 4:                  # Merge Sort
         print("MERGE SORT")
         take_numbers()
         merge_sort(list)
         new_list()
+
     while method == 5:                  # Quick Sort
         print("QUICK SORT")
         take_numbers()
         quick_sort(list)
         new_list()
+
     while method > 5 or method < 1:     # Checks for invalid input
-        invalid()
+        invalid()                       # Calls invalid screen
         choose()
 
 
 def take_numbers():             # This method takes the user input for how many numbers
     user_numbers = int(input("How many numbers do you want to sort? >>>"))
     for num in range(user_numbers):
-        list.append(random.randint(1, 100000))
+        list.append(random.randint(1, 100000))          # Appends random numbers to the list
     print(f"""\nHere is your list of \033[1m {user_numbers} \033[0m numbers: """,
           list)
     time.sleep(1)

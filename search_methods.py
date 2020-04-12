@@ -60,7 +60,7 @@ def merge_sort(arr):
     # Perform merge_sort recursively on both halves
     left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
 
-    # MErge each side together
+    # Merge each side together
     return merge(left, right, arr.copy())
 
 def merge(left, right, merged):
@@ -68,7 +68,7 @@ def merge(left, right, merged):
     left_cursor, right_cursor = 0, 0
     while left_cursor < len(left) and right_cursor < len(right):
 
-        # sort eahc one and place into the result
+        # sort each one and place into the result
         if left[left_cursor] <= right[right_cursor]:
             merged[left_cursor+right_cursor]=left[left_cursor]
             left_cursor += 1
