@@ -43,22 +43,27 @@ def choose():                   # This is where the user chooses a method
     """)
     method = int(input(">>>"))
     while method == 1:                  # Bubble Sort
+        print("BUBBLE SORT")
         take_numbers()
         bubble_sort(list)
         new_list()
     while method == 2:                  # Selection Sort
+        print("SELECTION SORT")
         take_numbers()
         selection_sort(list)
         new_list()
     while method == 3:                  # Insertion Sort
+        print("INSERTION SORT")
         take_numbers()
         insertion_sort(list)
         new_list()
     while method == 4:                  # Merge Sort
+        print("MERGE SORT")
         take_numbers()
         merge_sort(list)
         new_list()
     while method == 5:                  # Quick Sort
+        print("QUICK SORT")
         take_numbers()
         quick_sort(list)
         new_list()
