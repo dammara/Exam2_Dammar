@@ -24,7 +24,7 @@ def invalid():
 
 def welcome():              # Splash Screen
     print("""\033[1m
-    ------------LIST SORT VERSION 1.0------------ \033[0m
+    ------------LIST SORT VERSION 1.0.1------------ \033[0m
     Welcome. This program will sort random numbers
               from least to greatest.""")
     time.sleep(2)
@@ -89,7 +89,7 @@ def next():                     # This is the end screen to determine if the use
         list.clear()
         choose()
     elif choice == 2:           # Exits the program
-        print("Goodbye!")
+        print("\033[1mGoodbye! \033[0m")
         time.sleep(1)
         exit()
     else:                       # Checks if input is 1 or 2. If not, Invalid.
