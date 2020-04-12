@@ -18,9 +18,11 @@ def new_list():             # Will print the sorted list when called
     time.sleep(2)
     next()
 
+
 def invalid():
     print("\033[1mINAVLID CHOICE, TRY AGAIN \033[0m")
     time.sleep(2)
+
 
 def welcome():              # Splash Screen
     print("""\033[1m
